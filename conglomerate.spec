@@ -8,7 +8,6 @@ Release:	%{release}
 License:	GPL
 Group:		Editors
 URL:		http://www.conglomerate.org/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 Source:		http://prdownloads.sourceforge.net/conglomerate/%{name}-%{version}.tar.bz2
 Source1:	%{name}-48.png
