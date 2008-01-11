@@ -42,16 +42,6 @@ rm -rf %{buildroot}
 GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 %makeinstall_std
 
 # menu entry
-mkdir -p %{buildroot}%{_menudir}
-cat > %{buildroot}%{_menudir}/%{name} << _EOF_
-?package(%{name}): \
- command="%{_bindir}/conglomerate" \
- icon="%{name}.png" \
- longtitle="Edit XML files" \
- needs="x11" \
- section="More Applications/Editors" \
- title="Conglomerate XML Editor" xdg="true"
-_EOF_
 desktop-file-install --vendor="" \
   --remove-category="Application" \
   --add-category="X-MandrivaLinux-MoreApplications-Editors" \
@@ -98,7 +88,6 @@ rm -rf %{buildroot}
 %{_datadir}/omf/%name/%name-C.omf
 %{_datadir}/pixmaps/*
 %{_datadir}/gtk-doc/html/%name
-%{_menudir}/%{name}
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
