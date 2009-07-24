@@ -1,17 +1,18 @@
 %define version 0.9.1
-%define release %mkrel 7
+%define release %mkrel 8
 
 Summary:	A structural XML document editor
 Name:		conglomerate
 Version:	%{version}
 Release:	%{release}
-License:	GPL
+License:	GPLv2+
 Group:		Editors
 URL:		http://www.conglomerate.org/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 Source:		http://prdownloads.sourceforge.net/conglomerate/%{name}-%{version}.tar.bz2
 Source1:	%{name}-48.png
+Patch:		conglomerate-0.9.1-format-strings.patch
 BuildRequires:	gtksourceview-devel >= 0.6
 BuildRequires:	libgnomeui2-devel
 BuildRequires:	libxslt-devel
@@ -32,6 +33,7 @@ possible, to help non-technical people to use DocBook and similar formats.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 %configure2_5x
