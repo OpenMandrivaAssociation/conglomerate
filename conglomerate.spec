@@ -1,5 +1,5 @@
 %define version 0.9.1
-%define release %mkrel 8
+%define release %mkrel 9
 
 Summary:	A structural XML document editor
 Name:		conglomerate
