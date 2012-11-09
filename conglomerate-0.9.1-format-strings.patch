@@ -1,0 +1,36 @@
+diff -p -up conglomerate-0.9.1/src/cong-menus.c~ conglomerate-0.9.1/src/cong-menus.c
+--- conglomerate-0.9.1/src/cong-menus.c~	2005-06-13 20:53:41.000000000 +0200
++++ conglomerate-0.9.1/src/cong-menus.c	2009-07-24 08:35:56.000000000 +0200
+@@ -1469,7 +1469,7 @@ action_callback_help (GtkAction *action,
+ 
+ 	if(error!=NULL)
+ 	{
+-		g_warning(error->message);
++		g_warning("%s", error->message);
+ 		g_error_free(error);
+ 	}
+ }
+diff -p -up conglomerate-0.9.1/src/plugin-sgml.c~ conglomerate-0.9.1/src/plugin-sgml.c
+--- conglomerate-0.9.1/src/plugin-sgml.c~	2004-07-30 06:18:40.000000000 +0200
++++ conglomerate-0.9.1/src/plugin-sgml.c	2009-07-24 09:00:32.000000000 +0200
+@@ -166,7 +166,7 @@ sgml_importer_action_callback(CongServic
+ 		return;		
+ 	}
+ 
+-	g_message(standard_error);
++	g_message("%s", standard_error);
+ 
+ 	/* Attempt to parse the stdout into an xmlDocPtr: */
+ 	{
+diff -p -up conglomerate-0.9.1/src/recent-files/egg-recent-model.c~ conglomerate-0.9.1/src/recent-files/egg-recent-model.c
+--- conglomerate-0.9.1/src/recent-files/egg-recent-model.c~	2005-06-14 06:26:53.000000000 +0200
++++ conglomerate-0.9.1/src/recent-files/egg-recent-model.c	2009-07-24 08:34:07.000000000 +0200
+@@ -737,7 +737,7 @@ egg_recent_model_read (EggRecentModel *m
+ 	error = NULL;
+ 	if (!g_markup_parse_context_parse (ctx, content, strlen (content),
+ 					   &error)) {
+-		g_warning (error->message);
++		g_warning ("%s", error->message);
+ 		g_error_free (error);
+ 		error = NULL;
+ 		goto out;
