@@ -9,8 +9,8 @@ Source:		http://prdownloads.sourceforge.net/conglomerate/%{name}-%{version}.tar.
 Source1:	%{name}-48.png
 Patch:		conglomerate-0.9.1-format-strings.patch
 BuildRequires:	gtksourceview-devel >= 0.6
-BuildRequires:	libgnomeui2-devel
-BuildRequires:	libxslt-devel
+BuildRequires:	pkgconfig(libgnomeui-2.0)
+BuildRequires:	pkgconfig(libexslt)
 BuildRequires:	libglade2.0-devel >= 2.0.0
 BuildRequires:	enchant-devel
 BuildRequires:	scrollkeeper
