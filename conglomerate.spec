@@ -1,7 +1,7 @@
 Summary:	A structural XML document editor
 Name:		conglomerate
 Version:	0.9.1
-Release:	10
+Release:	11
 License:	GPLv2+
 Group:		Editors
 URL:		http://www.conglomerate.org/
