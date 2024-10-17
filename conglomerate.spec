@@ -4,7 +4,7 @@ Version:	0.9.1
 Release:	11
 License:	GPLv2+
 Group:		Editors
-URL:		http://www.conglomerate.org/
+URL:		https://www.conglomerate.org/
 Source:		http://prdownloads.sourceforge.net/conglomerate/%{name}-%{version}.tar.bz2
 Source1:	%{name}-48.png
 Patch:		conglomerate-0.9.1-format-strings.patch
