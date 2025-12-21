@@ -8,6 +8,11 @@ URL:		https://www.conglomerate.org/
 Source:		http://prdownloads.sourceforge.net/conglomerate/%{name}-%{version}.tar.bz2
 Source1:	%{name}-48.png
 Patch:		conglomerate-0.9.1-format-strings.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gtksourceview-devel >= 0.6
 BuildRequires:	pkgconfig(libgnomeui-2.0)
 BuildRequires:	pkgconfig(libexslt)
